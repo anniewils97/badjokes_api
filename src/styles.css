@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/bubble-letters');
+@import url('https://fonts.cdnfonts.com/css/pp-pangaia');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fde8f4;
+    margin: 0; 
+  }
+  
+  h1 {
+    color: #ff69b4;
+    font-family: 'Bubble Letters', sans-serif;
+    text-align: center;
+  }
+  
+  nav {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .joke-button {
+    background-color: #ffadd2; 
+    padding: 20px 30px; 
+    margin: 0px; 
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .joke-button a {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .joke-button:hover a {
+    color: inherit; 
+  }
+  
+  .joke-button:hover {
+    background-color: #fb91c1; 
+    transform: scale(1.05); 
+  }
+  
+  article {
+    background-color: #fff; 
+    font-family: 'pp-pangaia', serif;
+    padding: 20px;
+    margin: 20px auto; 
+    max-width: 600px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  article:hover {
+    transform: scale(1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  
+  h2 {
+    color: #ff69b4; 
+    text-align: center; 
+  }
+  
+  h3:hover,
+  h4:hover,
+  h5:hover {
+    color: #ff69b4;
+  }
+  
+  .joke-list {
+    align-items: center;
+  }
+  
+  .joke-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
