@@ -8,6 +8,8 @@ const JokeContainer = () => {
 
     const [jokes, setJokes] = useState([]);
     const [tenJokes, setTenJokes] = useState([]);
+    const [flipped, setFlipped] = useState(false);
+
 
     const fetchJokes = async () => {
         const response = await fetch("https://official-joke-api.appspot.com/jokes/random");
@@ -28,11 +30,17 @@ const JokeContainer = () => {
 
     const handleClickButton = () => {
         fetchJokes();
+        setFlipped(false);
     }
 
     const handleClickButtonTen = () => {
         fetchTenJokes();
+        setFlipped(false);
     }
+
+    const handleCardClick = () => {
+        setFlipped(!flipped);
+      };
 
     const jokeRoutes = createBrowserRouter([
         {
@@ -41,12 +49,12 @@ const JokeContainer = () => {
             children: [
                 {
                     path: "/jokes/random",
-                    element: <JokeList jokes={jokes} />
+                    element: <JokeList jokes={jokes} onCardClick={handleCardClick} flipped={flipped}/>
                 },
                 //path for random ten jokes
                 {
                     path: "/random_ten",
-                    element: <JokeList jokes={tenJokes} />
+                    element: <JokeList jokes={tenJokes} onCardClick={handleCardClick} flipped={flipped}/>
                 }
             ]
         }
